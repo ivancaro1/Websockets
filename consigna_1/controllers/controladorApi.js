@@ -13,7 +13,7 @@ const productsController = {
                 nombres:nombre,
                 hayProduct: Boolean(nombre.length > 0),
             }
-            res.render('layouts/layout_data', dato)
+            res.render('datos', dato)
         } catch(err) {
           console.log(err)
         }

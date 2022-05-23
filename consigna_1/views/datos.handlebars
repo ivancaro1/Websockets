@@ -1,0 +1,31 @@
+<h1 style="color:crimson;">Vista de productos</h1>
+{{#if hayProduct}}
+<div class="table-responsive">
+    <table class="table table-dark">
+        <tr style="color: yellow;">
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Foto</th>
+        </tr>
+            {{#each nombres}}
+        <tr>
+                <td>
+                    {{this.title}}
+                </td>
+                <td>
+                    {{this.price}}
+                </td>
+                <td>
+                    <img src="{{this.thumbnail}}" width="80" height="80"/>
+                </td>
+        </tr>
+            {{/each}}
+    </table>
+</div>
+{{else}}
+<h3 class="alert alert-danger">no hay nombres para mostrar...</h3>
+{{/if}}
+
+<form method="get" action="/">
+    <button type="submit">Ingresar nuevo producto</button>
+</form>

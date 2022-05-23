@@ -4,7 +4,7 @@ const { productsController } = require('../controllers/controladorApi.js')
 
 
 webRouter.get('/', (req, res) => {
-    res.render('layouts/layout')
+    res.render('formulario')
 })
 
 webRouter.get('/productos', productsController.getAll);

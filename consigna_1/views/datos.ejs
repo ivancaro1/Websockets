@@ -1,0 +1,31 @@
+<h1 style="color:crimson;">Vista de productos</h1>
+    <% if(hayProduct){ %>
+        <div class="table-responsive">
+            <table class="table table-dark">
+                <tr style="color: yellow;">
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Foto</th>
+                </tr>
+                <% for (const nombre of nombres) {%>
+                    <tr>
+                            <td>
+                                <%=nombre.title%>
+                            </td>
+                            <td>
+                                <%=nombre.price%>
+                            </td>
+                            <td>
+                                <img src="<%=nombre.thumbnail%>" width="80" height="80"/>
+                            </td>
+                    </tr>
+                    <%};%>
+                </table>
+            </div>
+            <% } else{ %>
+                <h3 class="alert alert-danger">no hay nombres para mostrar...</h3>
+                    <% } %>
+
+            <form method="get" action="/">
+                <button type="submit">Ingresar nuevo producto</button>
+            </form>

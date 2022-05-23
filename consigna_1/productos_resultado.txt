@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Escuadra",
+    "price": 123.45,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    "id": 1
+  },
+  {
+    "title": "Calculadora",
+    "price": 234.56,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+    "id": 2
+  },
+  {
+    "title": "Globo Terráqueo",
+    "price": 345.67,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+    "id": 3
+  },
+  {
+    "title": "Facebook",
+    "price": "99999999",
+    "thumbnail": "https://cdn2.iconfinder.com/data/icons/social-media-2189/48/4-Facebook-512.png",
+    "id": 1652670569179
+  },
+  {
+    "title": "Alien",
+    "price": "1",
+    "thumbnail": "https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_universe_galaxy_alien_fiction_ufo_monster-512.png",
+    "id": 1652673717118
+  }
+]

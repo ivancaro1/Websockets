@@ -1,13 +1,9 @@
-const express = require('express')
-const webRouter = express.Router()
-const { productsController } = require('../controllers/controladorApi.js')
+const { Router } = require('express')
+const { webGetController } = require('../controller/controladorWeb.js')
 
+const router = new Router()
 
-webRouter.get('/', (req, res) => {
-    res.render('formulario')
-})
+router.get('/', webGetController)
+router.post('/', webGetController)
 
-webRouter.get('/productos', productsController.getAll);
-webRouter.post('/productos', productsController.save);
-
-module.exports = { webRouter }
+module.exports = router

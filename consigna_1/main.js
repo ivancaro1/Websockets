@@ -1,28 +1,22 @@
 const express = require('express');
-const { webRouter } = require('./router/webRouter.js')
-const { engine } = require('express-handlebars')
+const { Server: HttpServer } = require('http')
+const socketController = require('./controller/controladorSocket.js')
+const webRouter = require('./router/webRouter.js')
 
 const app = express();
+const httpServer = new HttpServer(app)
+const io = new socketController(httpServer)
+
+/* ------------------------------------------------------ */
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-
-const handlebarsConfig = {
-    defaultLayout: 'main.handlebars',
-    layoutsDir: __dirname + '/views/layouts'
-  }
-/* ------------------------------------------------------ */
-app.engine('handlebars', engine(handlebarsConfig))
-app.set('view engine', 'handlebars')
-app.set('views', './views')
 app.use(express.static('public'))
-
 app.use(webRouter)
-
 /* ------------------------------------------------------ */
 /* Server Listen */
 
 const PORT = 8080
-const server = app.listen(PORT, ()=>{
+const server = httpServer.listen(PORT, ()=>{
     console.log(`Servidor escuchando en el puerto ${server.address().port}`)
 });
 server.on('error',error => console.log(`Error en el servidor ${error}`))
